@@ -1,0 +1,132 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+nav {
+	background-color: #333;
+	
+	padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+
+}
+h1 {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 35pt;
+    margin: 5px;
+	text-align: justify;
+    color: #fff;
+}
+nav ul {
+    color: #fff;
+	list-style: none;
+    text-align:right;
+	padding: 0;
+    margin: 15px;
+}
+
+nav li {
+	display:inline-block;
+	margin-right: 5px;
+	font-size: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #c77241;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+main {
+	flex: 3;
+	padding: 20px;
+}
+
+article {
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+article header {
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+aside {
+	flex: 1;
+	padding: 20px;
+	background-color: #ccc;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	position: static;
+	bottom: 0;
+	width: 97%;
+}
+
+footer a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+  }

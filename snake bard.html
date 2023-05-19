@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Snake Game</title>
+<style>
+body {
+  background-color: black;
+  width: 300px;
+  height: 300px;
+}
+
+.snake {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.apple {
+  width: 5px;
+  height: 5px;
+  background-color: red;
+  position: absolute;
+}
+</style>
+</head>
+<body>
+<div id="snake"></div>
+<div id="apple"></div>
+
+<script>
+var snake = document.getElementById("snake");
+var apple = document.getElementById("apple");
+
+var snakeX = 100;
+var snakeY = 100;
+
+var snakeDir = "right";
+
+var appleX = Math.floor(Math.random() * 290);
+var appleY = Math.floor(Math.random() * 290);
+
+function moveSnake() {
+  switch (snakeDir) {
+    case "up":
+      snakeY--;
+      break;
+    case "down":
+      snakeY++;
+      break;
+    case "left":
+      snakeX--;
+      break;
+    case "right":
+      snakeX++;
+      break;
+  }
+
+  snake.style.top = snakeY + "px";
+  snake.style.left = snakeX + "px";
+}
+
+function checkCollision() {
+  if (snakeX < 0 || snakeX > 290 || snakeY < 0 || snakeY > 290) {
+    alert("Game Over!");
+    return;
+  }
+
+  if (snake.contains(apple)) {
+    appleX = Math.floor(Math.random() * 290);
+    appleY = Math.floor(Math.random() * 290);
+  }
+
+  for (var i = 1; i < snake.children.length; i++) {
+    if (snake.children[i].contains(snake.children[0])) {
+      alert("Game Over!");
+      return;
+    }
+  }
+}
+
+setInterval(moveSnake, 100);
+setInterval(checkCollision, 100);
+</script>
+</body>
+</html>
